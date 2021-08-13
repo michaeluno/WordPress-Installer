@@ -9,7 +9,7 @@ Configure the setting file, `settings.cfg`, and run `install.sh`.
 
 ## Getting Started
 
-1. **Important** Rename `settings-sample.cfg` in `test/` to `settings.cfg`. Edit the file and set up necessary paths, database user name password, and host, plugin slug, test site location etc.
+1. **Important** Rename `settings-sample.cfg` to `settings.cfg`. Edit the file and set up necessary paths, database user name password, and host, plugin slug, test site location etc.
 2. Run
 
 ```
