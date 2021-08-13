@@ -165,7 +165,7 @@ echo Installation has been completed!
 WP_URL_ADMIN="$WP_URL/wp-admin"
 echo Opening, "$WP_URL_ADMIN"
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  xdg-open "$WP_URL_ADMINL"
+  xdg-open "$WP_URL_ADMIN"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   open "$WP_URL_ADMIN"
 elif [[ "$OSTYPE" == "cygwin" ]]; then
