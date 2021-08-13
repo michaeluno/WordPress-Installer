@@ -11,7 +11,9 @@ _bak/
 .idea
 
 # Files containing sensitive information
-**settings.cfg
+*.cfg
+**.cfg
+!*.sample.cfg
 *.ini
 *config.neon
 
@@ -21,6 +23,7 @@ _bak/
 *.old.*
 *.bak.*
 *.del
+
 
 # PHP script files
 *.phar
