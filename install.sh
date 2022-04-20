@@ -81,12 +81,10 @@ installWordPress() {
     if [[ $DB_PASS ]]; then
         echo 'db pass is not empty'
         dbpass=--dbpass="${DB_PASS}"
-    fi    
-    php "$WPCLI" core config --dbname=$DB_NAME --dbuser="$DB_USER" $dbpass --extra-php <<PHP
-define( 'WP_DEBUG', true );
-define( 'WP_DEBUG_LOG', true );
-\$table_prefix = '$WP_TABLE_PREFIX';
-PHP
+    fi
+    php "$WPCLI" config create --dbname=$DB_NAME --dbuser="$DB_USER" $dbpass --dbprefix="$WP_TABLE_PREFIX" --dbhost="$DB_HOST"
+    php "$WPCLI" config set WP_DEBUG true --raw
+    php "$WPCLI" config set WP_DEBUG_LOG true --raw
     
     # Renew the database table
     setup_database_table
